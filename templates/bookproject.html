@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Fcsit Developers -contact</title>
+  <title>Fcsit Developers -Book Project</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,7 +50,7 @@
           <li><a href="{% url 'index' %}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="{% url 'about' %}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="{% url 'member' %}" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Members Name</span></a></li>
-          <li><a href="{% url 'contact' %}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Book for Projeect</span></a></li>
+          <li><a href="{% url 'project' %}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Book for Projeect</span></a></li>
           <li><a href="{% url 'feedback' %}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Feedback</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -106,38 +106,32 @@
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
               </div>
               <div class="row" data-aos="fade-in">
-                <!-- <form action="{% url 'contact' %}" method="post" role="form">
-                  {% csrf_token %}
-                  {{form1}}
-                  <input type="submit" value="SUBMIT"/>
-                </form> -->
                 <div class="col-lg-9 mt-5 mt-lg-0 d-flex align-items-center">
-                  <form action="{% url 'contact' %}" method="post" role="form">
+                  <form action="{% url 'project' %}" method="post" role="form">
                     {% csrf_token %}
-                    <!-- <input type="hidden" name="Form" value="{{ request.path }}"> -->
-                    <div class="form-group">
-                      <label for="name">Full Name</label>
-                      <input type="text" class="form-control" name="name" id="name" required>
-                    </div>
+                    <input type="hidden" name="Form" value="{{ request.path }}">
                     <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" class="form-control" id="name" required>
+                      </div>
                       <div class="form-group col-md-6">
                         <label for="name">Your Email</label>
                         <input type="email" class="form-control" name="email" id="email" required>
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="phone">Your Phone No.</label>
-                        <input type="text" name="phone" class="form-control" id="phone" required>
-                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Your Phone No.</label>
+                      <input type="number" class="form-control" name="phone" id="phone" required>
                     </div>
                     <div class="form-group">
                       <label for="name">Yor Project Topic</label>
-                      <input type="text" class="form-control" name="project" id="project" required>
+                      <input type="text" class="form-control" name="topic" id="topic" required>
                     </div>
                     <div class="form-group">
                       <label for="name">Description</label>
                       <textarea class="form-control" name="description" rows="10" required></textarea>
                     </div>
-                   
                     <div class="text-center"><button type="submit">Send Message</button></div>
                   </form>
                 </div>
